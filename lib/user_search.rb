@@ -102,19 +102,21 @@ module UserSearch
       pseudonym_user_ids = Pseudonym.select(:user_id).where(account:).to_sql
 
       user_ids = include_deleted_users ? "#{uaa_user_ids} UNION #{pseudonym_user_ids}" : uaa_user_ids
-      user_filter = include_deleted_users ? { delete_me_frd: true } : { workflow_state: "deleted" }
 
-      User
-        .with(user_scope: Arel.sql(
-          <<~SQL.squish
-            WITH inner_user_scope AS MATERIALIZED (
-              #{user_ids}
-            )
-            SELECT user_id FROM inner_user_scope
-          SQL
-        ))
-        .joins("INNER JOIN user_scope ON users.id = user_scope.user_id")
-        .where.not(users: user_filter)
+      scope = User
+              .with(user_scope: Arel.sql(
+                <<~SQL.squish
+                  WITH inner_user_scope AS MATERIALIZED (
+                    #{user_ids}
+                  )
+                  SELECT user_id FROM inner_user_scope
+                SQL
+              ))
+              .joins("INNER JOIN user_scope ON users.id = user_scope.user_id")
+
+      return scope if include_deleted_users
+
+      scope.where.not(users: { workflow_state: "deleted" })
     end
 
     def order_scope(users_scope, context, options = {})

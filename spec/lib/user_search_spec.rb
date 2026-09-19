@@ -568,6 +568,17 @@ describe UserSearch do
       expect(UserSearch.scope_for(group, @admin, enrollment_type: ["teacher"]).to_a).to be_empty
     end
 
+    it "includes deleted users in account context when include_deleted_users is true" do
+      account_admin_user
+      deleted_user = User.create!(name: "Deleted Account User")
+      deleted_user.pseudonyms.create!(unique_id: "deleted-account@example.com", account: Account.default)
+      deleted_user.remove_from_root_account(Account.default)
+
+      scope = UserSearch.scope_for(Account.default, @admin, include_deleted_users: true)
+      expect(scope.to_sql).not_to include("delete_me_frd")
+      expect(scope.to_a).to include(deleted_user)
+    end
+
     describe "account user list filtering by role" do
       subject { names }
 
