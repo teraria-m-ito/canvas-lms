@@ -23,7 +23,7 @@ export default function buildDownloadUrl(url) {
   try {
     downloadUrl = new URL(url)
   } catch (e) {
-    // eslint-disable-next-line no-throw-literal
+     
     throw `Error parsing ${url}. 'buildDownloadUrl' only supports absolute URLs.`
   }
 

@@ -19,7 +19,7 @@
 const splitStrings = require('./split-strings')
 
 Promise.resolve(splitStrings()).catch(e => {
-  // eslint-disable-next-line no-console
+   
   console.log('Something went wrong running split strings')
   throw e
 })

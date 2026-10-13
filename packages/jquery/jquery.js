@@ -791,7 +791,7 @@ try {
 
 	// Support: Android <=4.0
 	// Detect silently failing push.apply
-	// eslint-disable-next-line no-unused-expressions
+	 
 	arr[ preferredDoc.childNodes.length ].nodeType;
 } catch ( e ) {
 	push = {
@@ -900,7 +900,7 @@ function find( selector, context, results, seed ) {
 					// Support: IE 11+, Edge 17 - 18+
 					// IE/Edge sometimes throw a "Permission denied" error when
 					// strict-comparing two documents; shallow comparisons work.
-					// eslint-disable-next-line eqeqeq
+					 
 					if ( newContext != context || !support.scope ) {
 
 						// Capture the context ID, setting it first if necessary
@@ -1116,7 +1116,7 @@ function setDocument( node ) {
 	// Support: IE 11+, Edge 17 - 18+
 	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 	// two documents; shallow comparisons work.
-	// eslint-disable-next-line eqeqeq
+	 
 	if ( doc == document || doc.nodeType !== 9 || !doc.documentElement ) {
 		return document;
 	}
@@ -1142,7 +1142,7 @@ function setDocument( node ) {
 		// Support: IE 11+, Edge 17 - 18+
 		// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 		// two documents; shallow comparisons work.
-		// eslint-disable-next-line eqeqeq
+		 
 		preferredDoc != document &&
 		( subWindow = document.defaultView ) && subWindow.top !== subWindow ) {
 
@@ -1374,7 +1374,7 @@ function setDocument( node ) {
 		// Support: IE 11+, Edge 17 - 18+
 		// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 		// two documents; shallow comparisons work.
-		// eslint-disable-next-line eqeqeq
+		 
 		compare = ( a.ownerDocument || a ) == ( b.ownerDocument || b ) ?
 			a.compareDocumentPosition( b ) :
 
@@ -1389,7 +1389,7 @@ function setDocument( node ) {
 			// Support: IE 11+, Edge 17 - 18+
 			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 			// two documents; shallow comparisons work.
-			// eslint-disable-next-line eqeqeq
+			 
 			if ( a === document || a.ownerDocument == preferredDoc &&
 				find.contains( preferredDoc, a ) ) {
 				return -1;
@@ -1398,7 +1398,7 @@ function setDocument( node ) {
 			// Support: IE 11+, Edge 17 - 18+
 			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 			// two documents; shallow comparisons work.
-			// eslint-disable-next-line eqeqeq
+			 
 			if ( b === document || b.ownerDocument == preferredDoc &&
 				find.contains( preferredDoc, b ) ) {
 				return 1;
@@ -1452,7 +1452,7 @@ find.contains = function( context, elem ) {
 	// Support: IE 11+, Edge 17 - 18+
 	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 	// two documents; shallow comparisons work.
-	// eslint-disable-next-line eqeqeq
+	 
 	if ( ( context.ownerDocument || context ) != document ) {
 		setDocument( context );
 	}
@@ -1466,7 +1466,7 @@ find.attr = function( elem, name ) {
 	// Support: IE 11+, Edge 17 - 18+
 	// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 	// two documents; shallow comparisons work.
-	// eslint-disable-next-line eqeqeq
+	 
 	if ( ( elem.ownerDocument || elem ) != document ) {
 		setDocument( elem );
 	}
@@ -1964,7 +1964,7 @@ Expr = jQuery.expr = {
 			// forces the browser to treat the default option as
 			// selected when in an optgroup.
 			if ( elem.parentNode ) {
-				// eslint-disable-next-line no-unused-expressions
+				 
 				elem.parentNode.selectedIndex;
 			}
 
@@ -2392,7 +2392,7 @@ function matcherFromTokens( tokens ) {
 			// Support: IE 11+, Edge 17 - 18+
 			// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 			// two documents; shallow comparisons work.
-			// eslint-disable-next-line eqeqeq
+			 
 			var ret = ( !leadingRelative && ( xml || context != outermostContext ) ) || (
 				( checkContext = context ).nodeType ?
 					matchContext( elem, context, xml ) :
@@ -2464,7 +2464,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 				// Support: IE 11+, Edge 17 - 18+
 				// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 				// two documents; shallow comparisons work.
-				// eslint-disable-next-line eqeqeq
+				 
 				outermostContext = context == document || context || outermost;
 			}
 
@@ -2479,7 +2479,7 @@ function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
 					// Support: IE 11+, Edge 17 - 18+
 					// IE/Edge sometimes throw a "Permission denied" error when strict-comparing
 					// two documents; shallow comparisons work.
-					// eslint-disable-next-line eqeqeq
+					 
 					if ( !context && elem.ownerDocument != document ) {
 						setDocument( elem );
 						xml = !documentIsHTML;
@@ -7355,11 +7355,11 @@ function defaultPrefilter( elem, props, opts ) {
 				showHide( [ elem ], true );
 			}
 
-			/* eslint-disable no-loop-func */
+			 
 
 			anim.done( function() {
 
-				/* eslint-enable no-loop-func */
+				 
 
 				// The final step of a "hide" animation is actually hiding the element
 				if ( !hidden ) {

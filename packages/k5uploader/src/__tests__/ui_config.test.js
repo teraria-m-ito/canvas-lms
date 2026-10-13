@@ -57,7 +57,7 @@ describe('UiConfig', () => {
     const second = {other: true}
     uiConf.addFileFilter(first)
     uiConf.addFileFilter(second)
-    expect(uiConf.fileFilters.length).toEqual(2)
+    expect(uiConf.fileFilters).toHaveLength(2)
   })
 
   it('filterFor', function () {

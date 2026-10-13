@@ -141,7 +141,7 @@ describe('Upload reducer', () => {
     })
 
     it('empties the folders data', () => {
-      expect(Object.keys(upload(state, action).folders).length).toBe(0)
+      expect(Object.keys(upload(state, action).folders)).toHaveLength(0)
     })
 
     it('sets loadingFolders to false', () => {

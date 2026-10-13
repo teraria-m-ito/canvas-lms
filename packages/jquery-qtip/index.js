@@ -1,17 +1,17 @@
-/* eslint-disable dot-notation */
-/* eslint-disable object-shorthand */
+ 
+ 
 /* eslint-disable no-extra-boolean-cast */
-/* eslint-disable yoda */
-/* eslint-disable operator-assignment */
-/* eslint-disable no-sequences */
-/* eslint-disable block-scoped-var */
-/* eslint-disable no-var */
+ 
+ 
+ 
+ 
+ 
 /* eslint-disable no-cond-assign */
 /* eslint-disable no-empty */
-/* eslint-disable prefer-spread */
-/* eslint-disable vars-on-top */
-/* eslint-disable no-restricted-globals */
-/* eslint-disable no-lonely-if */
+ 
+ 
+ 
+ 
 
 /*
  * qTip2 - Pretty powerful tooltips - v2.2.0

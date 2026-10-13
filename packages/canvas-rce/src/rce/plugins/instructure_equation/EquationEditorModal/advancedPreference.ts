@@ -33,7 +33,7 @@ function wrapInErrorHandling<T>(func: () => T): StorageInteractionState<T> {
   try {
     return {state: 'success', returnValue: func()}
   } catch (exception) {
-    // eslint-disable-next-line no-console
+     
     console.warn('Store interaction failed: ', exception)
     return {state: 'failure'}
   }

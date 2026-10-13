@@ -1,5 +1,5 @@
 /* eslint-disable eslint-comments/no-unlimited-disable */
-/* eslint-disable */
+ 
 /*!
  * jQuery UI Progressbar 1.9.2
  * http://jqueryui.com

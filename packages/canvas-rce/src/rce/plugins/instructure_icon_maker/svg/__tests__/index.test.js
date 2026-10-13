@@ -1,4 +1,4 @@
-/* eslint-disable jest/no-large-snapshots */
+ 
 /*
  * Copyright (C) 2021 - present Instructure, Inc.
  *

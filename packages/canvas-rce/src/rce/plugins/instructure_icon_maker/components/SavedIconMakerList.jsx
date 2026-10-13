@@ -61,7 +61,7 @@ const SavedIconMakerList = props => {
   )
 }
 
-/* eslint-disable react/no-unused-prop-types */
+ 
 SavedIconMakerList.propTypes = {
   sortBy: PropTypes.shape({
     sort: PropTypes.oneOf(['date_added', 'alphabetical']).isRequired,
@@ -84,6 +84,6 @@ SavedIconMakerList.defaultProps = {
   searchString: '',
   onImageEmbed: () => {},
 }
-/* eslint-enable react/no-unused-prop-types */
+ 
 
 export default SavedIconMakerList

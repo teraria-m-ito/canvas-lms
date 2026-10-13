@@ -56,7 +56,7 @@ describe('advancedPreference', () => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       getItem(key: string) {
         throw new DOMException()
-        // eslint-disable-next-line no-unreachable
+         
         return null
       },
 

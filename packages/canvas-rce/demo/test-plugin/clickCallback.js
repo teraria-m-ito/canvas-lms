@@ -17,6 +17,6 @@
  */
 
 export default function (_ed, _document) {
-  // eslint-disable-next-line no-alert
+   
   window.alert('this is the test external plugin')
 }

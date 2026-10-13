@@ -1,4 +1,4 @@
-/* eslint-disable import/no-unresolved */
+ 
 /*
  * Copyright (C) 2015 - present Instructure, Inc.
  *

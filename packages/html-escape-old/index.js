@@ -16,8 +16,8 @@
  * with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-// eslint-disable-next-line import/no-unresolved
+ 
 export {default} from '@instructure/html-escape'
 
-// eslint-disable-next-line import/no-unresolved
+ 
 export * from '@instructure/html-escape'

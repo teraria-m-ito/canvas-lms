@@ -19,7 +19,7 @@
  */
 
 /* eslint-disable no-constant-condition */
-/* eslint-disable no-await-in-loop */
+ 
 
 const promisify = require('util').promisify
 const exec = promisify(require('child_process').exec)

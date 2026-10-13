@@ -88,7 +88,7 @@ describe('useDataUrl()', () => {
         writable: true,
         value: jest.fn().mockImplementation(() => ({
           readAsDataURL() {
-            // eslint-disable-next-line no-throw-literal
+             
             throw 'an error occured!'
           },
           result: 'data:image/png;base64,asdfasdfjksdf==',

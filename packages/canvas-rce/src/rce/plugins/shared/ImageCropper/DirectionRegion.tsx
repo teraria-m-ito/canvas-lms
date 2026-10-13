@@ -28,7 +28,7 @@ export enum Direction {
   NONE = 0,
 }
 
-const directionToWord = (direction: Direction): String | null => {
+const directionToWord = (direction: Direction): string | null => {
   switch (direction) {
     case Direction.LEFT:
       return formatMessage('Left')

@@ -64,7 +64,7 @@ describe('Sidebar reducer', () => {
 
     it('appends results to the appropriate collection', () => {
       const newState = reducer(state, actions.receivePage('modules', page))
-      expect(newState.collections.modules.links.length).toEqual(2)
+      expect(newState.collections.modules.links).toHaveLength(2)
       expect(newState.collections.modules.links[1]).toEqual(page.links[0])
     })
 

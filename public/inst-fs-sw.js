@@ -35,14 +35,14 @@
  */
 
 // Ensure we take effect as quickly as possible.
-// eslint-disable-next-line no-restricted-globals
+ 
 self.addEventListener('install', function (event) {
   // The promise that skipWaiting() returns can be safely ignored.
-// eslint-disable-next-line no-restricted-globals
+ 
   self.skipWaiting()
 })
 
-// eslint-disable-next-line no-restricted-globals
+ 
 self.addEventListener('fetch', function (event) {
   if (eligibleRequest(event.request)) {
     event.respondWith(fetchFile(event.request))

@@ -1,4 +1,4 @@
-/* eslint-disable prefer-spread */
+ 
 /*!
  * jQuery Tiny Pub/Sub - v0.6 - 1/10/2011
  * http://benalman.com/
