@@ -45,7 +45,13 @@ Rails.configuration.to_prepare do
       nil
     end
   end
-  LiveEvents.stream_client = ->(settings) { StubbedClient if settings["stub_kinesis"] }
+  LiveEvents.stream_client = lambda do |settings|
+    if settings["kafka_brokers"].present?
+      Canvas::LiveEventsKafkaClient.new(settings)
+    elsif settings["stub_kinesis"]
+      StubbedClient
+    end
+  end
   # sometimes this async worker thread grabs a connection on a Setting read or similar.
   # We need it to be released or the main thread can have a real problem.
   LiveEvents.on_work_unit_end = -> { ActiveRecord::Base.connection_handler.clear_active_connections!(:all) }

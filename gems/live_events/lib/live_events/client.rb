@@ -36,6 +36,8 @@ module LiveEvents
           "LIVE_EVENTS: stub_kinesis was set in production with value #{res["stub_kinesis"]}"
         )
       end
+      # Kafka 送信時は Kinesis の設定・認証情報は不要
+      return res.dup if res && res["kafka_brokers"].present?
       return nil unless res && res["kinesis_stream_name"].present? &&
                         (res["aws_region"].present? || res["aws_endpoint"].present?)
 

@@ -35,6 +35,7 @@ gem "authlogic", github: "binarylogic/authlogic", ref: "d155fff4672595af99cb3488
   gem "scrypt", "~> 3.0"
 gem "aws-sdk-bedrockruntime", "~> 1.7", require: false
 gem "aws-sdk-kinesis", "~> 1.45", require: false
+gem "rdkafka", "~> 0.21.0", require: false
 gem "aws-sdk-s3", "~> 1.119", require: false
 gem "aws-sdk-sns", "~> 1.60", require: false
 gem "aws-sdk-sqs", "~> 1.53", require: false
